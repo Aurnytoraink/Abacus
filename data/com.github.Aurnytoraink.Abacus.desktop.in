@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=abacus
+Exec=abacus
+Icon=com.github.Aurnytoraink.Abacus
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

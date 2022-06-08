@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="abacus">
+	<schema id="com.github.Aurnytoraink.Abacus" path="/com/github/Aurnytoraink/Abacus/">
+	</schema>
+</schemalist>

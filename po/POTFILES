@@ -1,0 +1,7 @@
+data/com.github.Aurnytoraink.Abacus.desktop.in
+data/com.github.Aurnytoraink.Abacus.appdata.xml.in
+data/com.github.Aurnytoraink.Abacus.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+
