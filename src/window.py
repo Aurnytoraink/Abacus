@@ -15,11 +15,11 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk
+from gi.repository import Gtk, Adw
 
 
 @Gtk.Template(resource_path='/com/github/Aurnytoraink/Abacus/ui/window.ui')
-class AbacusWindow(Gtk.ApplicationWindow):
+class AbacusWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'AbacusWindow'
 
     label = Gtk.Template.Child()
