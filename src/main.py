@@ -22,7 +22,7 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
-from .window import AbacusWindow, AboutDialog
+from .window import AbacusWindow
 
 
 class AbacusApplication(Adw.Application):
@@ -48,8 +48,14 @@ class AbacusApplication(Adw.Application):
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
-        about = AboutDialog(self.props.active_window)
+        about_builder = Gtk.Builder.new_from_resource(
+            '/com/github/Aurnytoraink/Abacus/about.ui'
+        )
+        about = about_builder.get_object('aboutdialog')
+        about.set_modal(True)
+        about.set_transient_for(self.props.active_window)
         about.present()
+
 
     def on_preferences_action(self, widget, _):
         """Callback for the app.preferences action."""

@@ -26,16 +26,3 @@ class AbacusWindow(Adw.ApplicationWindow):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-
-
-class AboutDialog(Gtk.AboutDialog):
-
-    def __init__(self, parent):
-        Gtk.AboutDialog.__init__(self)
-        self.props.program_name = 'abacus'
-        self.props.version = "0.1.0"
-        self.props.authors = ['Aurnytoraink']
-        self.props.copyright = '2022 Aurnytoraink'
-        self.props.logo_icon_name = 'com.github.Aurnytoraink.Abacus'
-        self.props.modal = True
-        self.set_transient_for(parent)

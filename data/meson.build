@@ -1,9 +1,12 @@
-pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-gnome = import('gnome')
+subdir('icons')
+subdir('ui')
+
+message('Compiling resources')
 
 gnome.compile_resources('abacus',
   'abacus.gresource.xml',
   gresource_bundle: true,
+  dependencies: about,
   install: true,
   install_dir: pkgdatadir,
 )
@@ -50,4 +53,4 @@ if compile_schemas.found()
   )
 endif
 
-subdir('icons')
+
